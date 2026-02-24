@@ -1,0 +1,242 @@
+Microsoft Windows [versão 10.0.19045.6466]
+(c) Microsoft Corporation. Todos os direitos reservados.
+
+C:\Users\Developer>javac -version
+javac 11.0.30
+
+C:\Users\Developer>cd ,,/,,
+O sistema não pode encontrar o caminho especificado.
+
+C:\Users\Developer>cd ../..
+
+C:\>cd C:\evosuite
+
+C:\evosuite>java -jar evosuite-1.2.0.jar -class Calculadora -projectCP C:\evosuite\projeto
+* EvoSuite 1.2.0
+* Going to generate test cases for class: Calculadora
+* Starting Client-0
+* Connecting to master process on port 11273
+* Analyzing classpath:
+[MASTER] 17:00:01.799 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: Calculadora with seed 1771531201186. Configuration id : null
+java.lang.IllegalArgumentException: Unsupported class file major version 69
+        at org.evosuite.shaded.org.objectweb.asm.ClassReader.<init>(ClassReader.java:199)
+        at org.evosuite.shaded.org.objectweb.asm.ClassReader.<init>(ClassReader.java:180)
+        at org.evosuite.shaded.org.objectweb.asm.ClassReader.<init>(ClassReader.java:166)
+        at org.evosuite.shaded.org.objectweb.asm.ClassReader.<init>(ClassReader.java:287)
+        at org.evosuite.setup.DependencyAnalysis.loadClassNode(DependencyAnalysis.java:328)
+        at org.evosuite.setup.DependencyAnalysis.getClassNode(DependencyAnalysis.java:301)
+        at org.evosuite.setup.ExceptionMapGenerator.initializeExceptionMap(ExceptionMapGenerator.java:38)
+        at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:131)
+        at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:140)
+        at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+* Computation finished
+[MASTER] 17:00:04.539 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 17:00:04.644 [main] ERROR TestGeneration - failed to write statistics data
+
+C:\evosuite>where javac
+C:\Program Files\Eclipse Adoptium\jdk-11.0.30.7-hotspot\bin\javac.exe
+
+C:\evosuite>cd C:\evosuite\projeto
+
+C:\evosuite\projeto>javac Calculadora.java
+
+C:\evosuite\projeto>javap -verbose Calculadora | find "major"
+  major version: 55
+
+C:\evosuite\projeto>cd C:\evosuite
+
+C:\evosuite>java -jar evosuite-1.2.0.jar -class Calculadora -projectCP C:\evosuite\projeto
+* EvoSuite 1.2.0
+* Going to generate test cases for class: Calculadora
+* Starting Client-0
+* Connecting to master process on port 14257
+* Analyzing classpath:
+  - C:\evosuite\projeto
+* Finished analyzing classpath
+* Generating tests for class Calculadora
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+[Progress:>                             0%] [Cov:>                                  0%]* Total number of test goals for DYNAMOSA: 52
+* Using seed 1771531344580
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 29 / 52
+[Progress:>                             1%] [Cov:================================>  93%]
+* Search finished after 2s and 1 generations, 829 statements, best individual has fitness: 1.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 5
+* Number of covered goals: 5
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 100%
+* Total number of goals: 4
+* Number of covered goals: 4
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 1
+* Number of covered goals: 1
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 100%
+* Total number of goals: 27
+* Number of covered goals: 27
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 100%
+* Total number of goals: 6
+* Number of covered goals: 6
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 100%
+* Total number of goals: 4
+* Number of covered goals: 4
+* Generated 7 tests with total length 14
+* Resulting test suite's coverage: 94% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 89%
+* Compiling and checking tests
+
+
+
+
+---------------------------------------------------------------------
+
+
+Microsoft Windows [versão 10.0.19045.6466]
+(c) Microsoft Corporation. Todos os direitos reservados.
+
+C:\Users\Developer>javac -version
+javac 11.0.30
+
+C:\Users\Developer>cd ,,/,,
+O sistema não pode encontrar o caminho especificado.
+
+C:\Users\Developer>cd ../..
+
+C:\>cd C:\evosuite
+
+C:\evosuite>java -jar evosuite-1.2.0.jar -class Calculadora -projectCP C:\evosuite\projeto
+* EvoSuite 1.2.0
+* Going to generate test cases for class: Calculadora
+* Starting Client-0
+* Connecting to master process on port 11273
+* Analyzing classpath:
+[MASTER] 17:00:01.799 [logback-2] ERROR ClientNodeImpl - Error when generating tests for: Calculadora with seed 1771531201186. Configuration id : null
+java.lang.IllegalArgumentException: Unsupported class file major version 69
+        at org.evosuite.shaded.org.objectweb.asm.ClassReader.<init>(ClassReader.java:199)
+        at org.evosuite.shaded.org.objectweb.asm.ClassReader.<init>(ClassReader.java:180)
+        at org.evosuite.shaded.org.objectweb.asm.ClassReader.<init>(ClassReader.java:166)
+        at org.evosuite.shaded.org.objectweb.asm.ClassReader.<init>(ClassReader.java:287)
+        at org.evosuite.setup.DependencyAnalysis.loadClassNode(DependencyAnalysis.java:328)
+        at org.evosuite.setup.DependencyAnalysis.getClassNode(DependencyAnalysis.java:301)
+        at org.evosuite.setup.ExceptionMapGenerator.initializeExceptionMap(ExceptionMapGenerator.java:38)
+        at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:131)
+        at org.evosuite.rmi.service.ClientNodeImpl.lambda$startNewSearch$0(ClientNodeImpl.java:140)
+        at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+* Computation finished
+[MASTER] 17:00:04.539 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 17:00:04.644 [main] ERROR TestGeneration - failed to write statistics data
+
+C:\evosuite>where javac
+C:\Program Files\Eclipse Adoptium\jdk-11.0.30.7-hotspot\bin\javac.exe
+
+C:\evosuite>cd C:\evosuite\projeto
+
+C:\evosuite\projeto>javac Calculadora.java
+
+C:\evosuite\projeto>javap -verbose Calculadora | find "major"
+  major version: 55
+
+C:\evosuite\projeto>cd C:\evosuite
+
+C:\evosuite>java -jar evosuite-1.2.0.jar -class Calculadora -projectCP C:\evosuite\projeto
+* EvoSuite 1.2.0
+* Going to generate test cases for class: Calculadora
+* Starting Client-0
+* Connecting to master process on port 14257
+* Analyzing classpath:
+  - C:\evosuite\projeto
+* Finished analyzing classpath
+* Generating tests for class Calculadora
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+[Progress:>                             0%] [Cov:>                                  0%]* Total number of test goals for DYNAMOSA: 52
+* Using seed 1771531344580
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 29 / 52
+[Progress:>                             1%] [Cov:================================>  93%]
+* Search finished after 2s and 1 generations, 829 statements, best individual has fitness: 1.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 5
+* Number of covered goals: 5
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 100%
+* Total number of goals: 4
+* Number of covered goals: 4
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 1
+* Number of covered goals: 1
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 100%
+* Total number of goals: 27
+* Number of covered goals: 27
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 100%
+* Total number of goals: 6
+* Number of covered goals: 6
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 100%
+* Total number of goals: 4
+* Number of covered goals: 4
+* Generated 7 tests with total length 14
+* Resulting test suite's coverage: 94% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 89%
+* Compiling and checking tests
+* Writing tests to file
+* Writing JUnit test case 'Calculadora_ESTest' to evosuite-tests
+* Done!
+
+* Computation finished
+
+C:\evosuite>
